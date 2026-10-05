@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+
+class Panda
+{
+    public string Name;
+    public bool LikesBamboo;
+    public bool LikesSwing;
+}
+
+class Program
+{
+    static void Main()
+    
+
+    {
+        Panda panda1 = new Panda();
+        panda1.Name = "Uleessys";
+        panda1.LikesBamboo = true;
+        panda1.LikesSwing = true;
+
+        Panda panda2 = new Panda();
+        panda2.Name = "Po";
+        panda2.LikesBamboo = true;
+        panda2.LikesSwing = false;
+
+        List<Panda> Pandas = new List<Panda>();
+
+        Pandas.Add(panda1);
+        Pandas.Add(panda2);
+
+        foreach (Panda panda in Pandas)
+        {
+            Console.WriteLine("Panda Name: " + panda.Name);
+            Console.WriteLine("Likes Bamboo: " + panda.LikesBamboo);
+            Console.WriteLine("Likes Swing: " + panda.LikesSwing);
+            Console.WriteLine();
+        }
+    }
+}
