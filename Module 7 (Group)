@@ -1,0 +1,49 @@
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+        static void Main()
+        {
+            // STEP 1: Create the dictionary
+            Dictionary<string, string> dictionary =
+                new Dictionary<string, string>();
+                
+            
+            // STEP 2: Display the Menu
+            Console.WriteLine("=== Dictionary Menu ===");
+            Console.WriteLine("1. Populate Dictionary");
+            Console.Write("Choose an option: ");
+            
+            // Read user's input.
+            string choice = Console.ReadLine() ?? "";
+            
+            // STEP 3: Use a switch statement
+            switch (choice)
+            {
+                // STEP 4: Populate the Dictionary
+                case "1":
+                    dictionary.Add("Apple", "Fruit");
+                    dictionary.Add("Car", "Vehicle");
+                    dictionary.Add("Dog", "Animal");
+                    dictionary.Add("Book", "Reading material");
+                    
+                    
+                    // Notify that the disctionary is populated
+                    Console.WriteLine(
+                        "Dictionary populated successfully!");
+                        break;
+                        
+            }
+            // STEP 6: Display Dictionary Contents
+            Console.WriteLine("\n=== Dictionary Contents ===");
+            
+            foreach (KeyValuePair<string, string> item in dictionary)
+            {
+                Console.WriteLine($"{item.Key}: {item.Value}");
+            }
+                    // STEP 7: End the Program
+        // Display a message when the program finishes.
+        Console.WriteLine("\nProgram finished.");
+    }
+}
